@@ -1,0 +1,24 @@
+<form
+  (submit)="
+    $event.preventDefault();
+    $event.stopPropagation();
+    !config.get().loggedIn
+  "
+>
+  <h2>Login</h2>
+  <p>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label>Passwort</mat-label>
+      <input matInput placeholder="Passwort" type="password" />
+    </mat-form-field>
+  </p>
+
+  <button mat-flat-button>Anmelden</button>
+</form>
