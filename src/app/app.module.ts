@@ -13,9 +13,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ChatComponent } from './chat/chat.component';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { TestSimulationComponent } from './test-simulation/test-simulation.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HeaderComponent],
+  declarations: [AppComponent, LoginComponent, HeaderComponent, ChatComponent, TestSimulationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,8 +33,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
+    FormsModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [
+    provideAnimationsAsync(),
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
