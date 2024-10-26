@@ -1,3 +1,22 @@
-<p>{{ output }}</p>
-<input [(ngModel)]="input" />
-<button (click)="ask()">ask</button>
+<div class="container">
+  <span *ngFor="let message of messages">
+    <p *ngIf="message.role != 'system'" style="white-space: pre-wrap">
+      {{ message.role }}:
+      <br />
+      {{ message.content }}
+      <mat-spinner *ngIf="message.content.length == 0"></mat-spinner>
+    </p>
+  </span>
+  <mat-form-field style="width: 100%; height: 300px">
+    <mat-label>Antwort</mat-label>
+    <textarea
+      matInput
+      placeholder="Bitte gebe eine Antwort ein..."
+      [(ngModel)]="input"
+      style="width: 100%; height: 250px"
+    ></textarea>
+  </mat-form-field>
+  <button mat-raised-button (click)="ask()" style="float: right">
+    Antworten
+  </button>
+</div>
