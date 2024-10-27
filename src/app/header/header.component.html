@@ -3,16 +3,22 @@
     <mat-icon>menu</mat-icon>
   </button>
   <button mat-button style="font-size: 30px !important" routerLink="/">
-    CC24
+    LAIV
   </button>
   <button mat-button style="font-size: 20px !important" routerLink="/chat">
-    AI
+    Kundensimulator
   </button>
   <button mat-button style="font-size: 20px !important" routerLink="/lerntyp">
     Lerntypanalyse
   </button>
+  <button mat-button style="font-size: 20px !important" routerLink="/wissenszentrale">
+    Wissenszentrale
+  </button>
+  <button mat-button style="font-size: 20px !important" routerLink="/altklausuren">
+    Altklausuren
+  </button>
   <span style="flex: 1 1 auto"></span>
   <button mat-flat-button *ngIf="!config.get().loggedIn">
-    Angemeldet, willkommen Tom!
+    Angemeldet, willkommen Günter!
   </button>
 </mat-toolbar>

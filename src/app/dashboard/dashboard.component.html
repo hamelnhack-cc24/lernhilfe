@@ -1,1 +1,59 @@
-<p>dashboard works!</p>
+<div>
+    <div class="progress-total">
+        <p class="title">Lernfortschritt</p>
+        <mat-progress-bar
+        mode="determinate"
+        [value]=66
+        ></mat-progress-bar>
+    </div>
+    <div class="button-link">
+        <mat-card style="width: 94%;" class="button-link">
+            <mat-card-header>
+                <mat-card-title>Wissenszentrale</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Ich möchte dich gerne darin unterstützen, das nötige Wissen für die für dich 
+                    relevantren Themen zu erlangen. Selbstverständlich genau auf dich zugeschnitten.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button routerLink="/wissenszentrale" mat-button>Los gehts</button>
+            </mat-card-actions>
+            </mat-card>
+    </div>
+<div class="grid-container">
+    <div class="item">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>Kundenberatung</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                Dein virtueller Kunde ist schon ganz gespannt auf dich.
+                Sprich jetzt mit einem unseren verschiedenen Kunden im 
+                KI basierten Onlinechat.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button routerLink="/chat" mat-button>Los gehts</button>
+            </mat-card-actions>
+            </mat-card>
+    </div>
+    <div class="item">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>Prüfungsvorbereitung</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                Ich helfe dir dabei, dich optimal auf die schriftliche Prüfung vorzubereiten.
+                Dazu wird auf eine Datenbank mit unzähligen Altklausuren zugegriffen.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>Los gehts</button>
+            </mat-card-actions>
+            </mat-card>
+    </div>
+</div>

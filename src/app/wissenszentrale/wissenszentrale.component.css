@@ -1,0 +1,31 @@
+.card {
+  width: 95%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.progress {
+  margin: 2%;
+  --mdc-linear-progress-track-height: 200px;
+  --mdc-linear-progress-active-indicator-height: 200px;
+  --mdc-linear-progress-active-indicator-color: #004c88;
+}
+.progress-total {
+  margin: 2%;
+  --mdc-linear-progress-track-height: 20px;
+  --mdc-linear-progress-active-indicator-height: 20px;
+}
+.title {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+}
+.grid-container-50 {
+  display: grid;
+  grid-template-columns: 92% auto;
+}
+.percentage {
+  align-items: right;
+}

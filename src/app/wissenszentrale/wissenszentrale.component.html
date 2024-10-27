@@ -1,0 +1,109 @@
+<div class="progress-total">
+  <p class="title">Fortschritt</p>
+  <mat-progress-bar mode="determinate" [value]="66"></mat-progress-bar>
+</div>
+
+<div class="grid-container">
+  <div class="progress">
+    <p class="title">Rechtliche Grundlagen</p>
+    <mat-progress-bar mode="determinate" [value]="percentRechtliche"></mat-progress-bar>
+    <div class="grid-container-50">
+        <div>
+          <button
+            mat-button
+            style="font-size: 20px"
+            routerLink="/versicherungsprodukte"
+          >
+            Jetzt lernen
+          </button>
+        </div>
+        <div>
+          <p class="percentage">{{ percentRechtliche }}%</p>
+        </div>
+      </div>
+  </div>
+  <div class="progress">
+    <p class="title">Kundenberatung</p>
+    <mat-progress-bar
+      style="--mdc-linear-progress-active-indicator-color: green"
+      mode="determinate"
+      [value]="percentKundenberatung"
+    ></mat-progress-bar>
+    <div class="grid-container-50">
+        <div>
+          <button
+            mat-button
+            style="font-size: 20px"
+            routerLink="/versicherungsprodukte"
+          >
+            Jetzt lernen
+          </button>
+        </div>
+        <div>
+          <p class="percentage">{{ percentKundenberatung }}%</p>
+        </div>
+      </div>
+  </div>
+  <div class="progress">
+    <p class="title">Versicherungsprodukte</p>
+    <mat-progress-bar
+      style="--mdc-linear-progress-active-indicator-color: #ffd60a"
+      mode="determinate"
+      [value]="percentVersicherungsprodukte"
+    ></mat-progress-bar>
+    <div class="grid-container-50">
+        <div>
+          <button
+            mat-button
+            style="font-size: 20px"
+            routerLink="/versicherungsprodukte"
+          >
+            Jetzt lernen
+          </button>
+        </div>
+        <div>
+          <p class="percentage">{{ percentVersicherungsprodukte }}%</p>
+        </div>
+      </div>
+    </div>
+  <div class="progress">
+    <p class="title">Schadenregulierung</p>
+    <mat-progress-bar
+      style="--mdc-linear-progress-active-indicator-color: red"
+      mode="determinate"
+      [value]="percentSchadenregulierung"
+    ></mat-progress-bar>
+    <div class="grid-container-50">
+      <div>
+        <button
+          mat-button
+          style="font-size: 20px"
+          routerLink="/versicherungsprodukte"
+        >
+          Jetzt lernen
+        </button>
+      </div>
+      <div>
+        <p class="percentage">{{ percentSchadenregulierung }}%</p>
+      </div>
+    </div>
+  </div>
+  <div class="progress">
+    <p class="title">Finanzprodukte</p>
+    <mat-progress-bar mode="determinate" [value]="percentFinanzprodukte"></mat-progress-bar>
+    <div class="grid-container-50">
+        <div>
+          <button
+            mat-button
+            style="font-size: 20px"
+            routerLink="/versicherungsprodukte"
+          >
+            Jetzt lernen
+          </button>
+        </div>
+        <div>
+          <p class="percentage">{{ percentFinanzprodukte }}%</p>
+        </div>
+      </div>
+  </div>
+</div>

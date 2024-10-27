@@ -36,7 +36,7 @@ export class ChatComponent {
       .post(
         'http://localhost:11434/api/chat',
         {
-          model: 'llama3.1',
+          model: 'llama3.2:1b',
           messages: this.messages.slice(0, -1),
           stream: true,
         },

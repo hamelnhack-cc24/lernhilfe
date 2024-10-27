@@ -26,6 +26,9 @@ import { FormsModule } from '@angular/forms';
 import { TestSimulationComponent } from './test-simulation/test-simulation.component';
 import { LerntypComponent } from './lerntyp/lerntyp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { WissenszentraleComponent } from './wissenszentrale/wissenszentrale.component';
+import { AltklausurenComponent } from './altklausuren/altklausuren.component';
+import { VersicherungsprodukteComponent } from './versicherungsprodukte/versicherungsprodukte.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TestSimulationComponent,
     LerntypComponent,
     DashboardComponent,
+    WissenszentraleComponent,
+    AltklausurenComponent,
+    VersicherungsprodukteComponent,
   ],
   imports: [
     BrowserModule,

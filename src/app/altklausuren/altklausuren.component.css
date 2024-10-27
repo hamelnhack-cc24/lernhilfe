@@ -1,0 +1,11 @@
+.subtitle {
+    text-align: left;
+    margin-left: 2%;
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+.download {
+    font-size: 20px;
+    font-family: 'Roboto';
+    margin-left: 2%;
+}
