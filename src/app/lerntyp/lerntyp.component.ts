@@ -21,7 +21,7 @@ export class LerntypComponent {
     option_3: '',
     option_4: '',
   };
-  selection: string | null = null;
+  selection?: string;
   scores?: { auditiv: number; bild: number; lesen: number; motorisch: number };
   scoresTotal?: number;
 
@@ -52,9 +52,6 @@ export class LerntypComponent {
             this.scores!.motorisch;
         } else {
           this.question = value as Question;
-          event.preventDefault();
-          this.selection = null;
-          this.selection = null;
         }
       });
   }
