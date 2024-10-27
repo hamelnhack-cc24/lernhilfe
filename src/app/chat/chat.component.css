@@ -1,3 +1,17 @@
 .container {
-  padding: 50px 300px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 50px;
+}
+
+.assistant {
+  background-color: #004c88;
+}
+
+.user {
+  background-color: #467ca4;
+}
+
+mat-card {
+  margin-bottom: 30px;
 }

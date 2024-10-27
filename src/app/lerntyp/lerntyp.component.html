@@ -1,0 +1,62 @@
+<div class="container">
+  <h2>Lerntypanalyse</h2>
+  <br />
+  <div *ngIf="!scores">
+    <label id="example-radio-group-label">{{ question?.frage }}</label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      ngDefaultControl
+      [(ngModel)]="selection"
+    >
+      <mat-radio-button class="example-radio-button" value="button1">{{
+        question?.option_1
+      }}</mat-radio-button>
+      <mat-radio-button class="example-radio-button" value="button2">{{
+        question?.option_2
+      }}</mat-radio-button>
+      <mat-radio-button class="example-radio-button" value="button3">{{
+        question?.option_3
+      }}</mat-radio-button>
+      <mat-radio-button
+        class="example-radio-button"
+        value="button4"
+        *ngIf="question!.option_4.length > 0"
+        >{{ question?.option_4 }}</mat-radio-button
+      >
+    </mat-radio-group>
+
+    <button
+      mat-flat-button
+      (click)="$event.preventDefault(); $event.stopPropagation(); next($event)"
+    >
+      Weiter
+    </button>
+  </div>
+
+  <div *ngIf="scores">
+    Auditiv: {{ round((scores.auditiv / scoresTotal!) * 100) }} %
+    <mat-progress-bar
+      mode="determinate"
+      [value]="(scores.auditiv / scoresTotal!) * 100"
+    ></mat-progress-bar>
+    <br />
+    Bild: {{ round((scores.bild / scoresTotal!) * 100) }} %
+    <mat-progress-bar
+      mode="determinate"
+      [value]="(scores.bild / scoresTotal!) * 100"
+    ></mat-progress-bar>
+    <br />
+    Lesen: {{ round((scores.lesen / scoresTotal!) * 100) }} %
+    <mat-progress-bar
+      mode="determinate"
+      [value]="(scores.lesen / scoresTotal!) * 100"
+    ></mat-progress-bar>
+    <br />
+    Motorisch: {{ round((scores.motorisch / scoresTotal!) * 100) }} %
+    <mat-progress-bar
+      mode="determinate"
+      [value]="(scores.motorisch / scoresTotal!) * 100"
+    ></mat-progress-bar>
+  </div>
+</div>

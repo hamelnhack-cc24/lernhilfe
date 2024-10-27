@@ -1,11 +1,61 @@
 <div class="container">
+  <h2>Kundengesprächs-Simulation</h2>
   <span *ngFor="let message of messages">
-    <p *ngIf="message.role != 'system'" style="white-space: pre-wrap">
+    <mat-card
+      *ngIf="message.role != 'system'"
+      [ngStyle]="{
+        'background-color': message.role == 'user' ? '#D3DDE7' : '#004C88',
+        color: message.role == 'user' ? '#000' : '#fff',
+        'margin-left': message.role == 'user' ? '500px' : '0',
+        'margin-right': message.role == 'user' ? '0' : '200px'
+      }"
+    >
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          [ngStyle]="{
+            'background-image':
+              message.role == 'user'
+                ? 'url(\'a3c9b5492f12c7e5960455834fc9551f.webp\')'
+                : 'url(\'/13298228.png\')',
+            'background-size': 'cover'
+          }"
+        ></div>
+        <mat-card-title>{{
+          message.role == "user" ? "Du" : "Kunde"
+        }}</mat-card-title>
+        <mat-card-subtitle
+          [ngStyle]="{ color: message.role == 'user' ? '#000' : '#fff' }"
+          >{{
+            message.role == "user" ? "Versicherungsberater" : "AI-Assistant"
+          }}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <p style="white-space: pre-wrap">
+          {{ message.content }}
+          <mat-spinner *ngIf="message.content.length == 0"></mat-spinner>
+        </p>
+      </mat-card-content>
+      <!--<mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>-->
+    </mat-card>
+
+    <!--<p
+      *ngIf="message.role != 'system'"
+      style="white-space: pre-wrap"
+      [ngStyle]="{
+        'background-color': message.role == 'user' ? '#D3DDE7' : '#004C88',
+        color: message.role == 'user' ? '#000' : '#fff'
+      }"
+    >
       {{ message.role }}:
       <br />
       {{ message.content }}
       <mat-spinner *ngIf="message.content.length == 0"></mat-spinner>
-    </p>
+    </p>-->
   </span>
   <mat-form-field style="width: 100%; height: 300px">
     <mat-label>Antwort</mat-label>

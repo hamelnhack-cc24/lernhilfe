@@ -2,9 +2,17 @@
   <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <button mat-button style="font-size: 30px !important">CC24</button>
-  <button mat-button style="font-size: 20px !important">AI</button>
-  <button mat-button style="font-size: 20px !important">Lerntypanalyse</button>
+  <button mat-button style="font-size: 30px !important" routerLink="/">
+    CC24
+  </button>
+  <button mat-button style="font-size: 20px !important" routerLink="/chat">
+    AI
+  </button>
+  <button mat-button style="font-size: 20px !important" routerLink="/lerntyp">
+    Lerntypanalyse
+  </button>
   <span style="flex: 1 1 auto"></span>
-  <button mat-flat-button *ngIf="!config.get().loggedIn">Anmelden</button>
+  <button mat-flat-button *ngIf="!config.get().loggedIn">
+    Angemeldet, willkommen Tom!
+  </button>
 </mat-toolbar>

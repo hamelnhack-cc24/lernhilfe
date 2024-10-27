@@ -14,6 +14,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioButton } from '@angular/material/radio';
 import { ChatComponent } from './chat/chat.component';
 import {
   provideHttpClient,
@@ -21,6 +24,8 @@ import {
 } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TestSimulationComponent } from './test-simulation/test-simulation.component';
+import { LerntypComponent } from './lerntyp/lerntyp.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,8 @@ import { TestSimulationComponent } from './test-simulation/test-simulation.compo
     HeaderComponent,
     ChatComponent,
     TestSimulationComponent,
+    LerntypComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +48,9 @@ import { TestSimulationComponent } from './test-simulation/test-simulation.compo
     MatFormFieldModule,
     FormsModule,
     MatProgressSpinnerModule,
+    MatCardModule,
+    MatRadioButton,
+    MatProgressBarModule,
   ],
   providers: [
     provideAnimationsAsync(),
